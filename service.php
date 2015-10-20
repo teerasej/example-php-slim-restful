@@ -31,7 +31,7 @@ $app->get('/simple-array', function(){
 
 
 echo json_encode($resArray);
-})
+});
 
 
 $app->run();
