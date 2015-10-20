@@ -5,7 +5,6 @@ header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: GET, POST');
 header("Content-Type: application/json");
 /**
- * Created by PhpStorm.
  * User: teerasej
  * Date: 10/20/2015 AD
  * Time: 20:35
