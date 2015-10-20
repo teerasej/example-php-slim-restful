@@ -1,6 +1,7 @@
 <?php
 
 header("Access-Control-Allow-Origin: *");
+header("Content-Type: application/json");
 
 
 $result = (object)array('message' => 'Hi Cordova from PHP');
