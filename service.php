@@ -15,9 +15,18 @@ $app->get('/hello/:name', function ($name) {
     echo "Hello, $name";
 });
 
+$app->get('/hello/', function () {
+   echo "Hello, It's Nextflow";
+});
+
 $app->get('/simple-string', function(){
 	$result = (object)array('message' => 'Hi Cordova from PHP');
 	echo json_encode($result);
+});
+
+$app->get('/hello-nf', function(){
+   $result = (object)array('message' => 'Hi React Native! from PHP');
+   echo json_encode($result);
 });
 
 
@@ -32,6 +41,22 @@ $app->get('/simple-array', function(){
 echo json_encode($resArray);
 });
 
+
+
+$app->post('/signin', function () use ($app) {
+
+    $json = $app->request->getBody();
+    
+    $data = json_decode($json, true); 
+    $username = $data['username'];
+    $password = $data['password'];
+
+
+    $result = (object)array('message' => 'Hello, ' . $username);
+	echo json_encode($result);
+});
+
+	
 
 $app->run();
 
